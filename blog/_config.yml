@@ -21,8 +21,7 @@ social:
 
 # -----
 # Build
-sass:
-    sass_dir: css/_sass
+
 timezone: Etc/UTC
 
 permalink: pretty
