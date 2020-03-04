@@ -18,8 +18,8 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : https://tianqi.name
-baseurl : /jekyll-TeXt-theme
+url     : "https://freedompaul.github.io" # https://tianqi.name
+baseurl : "/blog/docs" #/jekyll-TeXt-theme
 title   : TeXt Theme
 description: >
   A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.
@@ -57,7 +57,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: kitian616/jekyll-TeXt-theme
+repository: FreedomPaul/freedompaul.github.io # kitian616/jekyll-TeXt-theme
 repository_tree: master
 
 
