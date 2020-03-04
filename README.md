@@ -1,2 +1,1 @@
-# freedompaul.github.io
-freedompaul's world
+# Freedom Paul's Blog
