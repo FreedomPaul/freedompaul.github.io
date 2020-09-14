@@ -16,30 +16,49 @@
 
 ## => Site Settings
 ##############################
-text_skin: forest # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: "tomorrow-night-eighties" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : # the base hostname & protocol for your site e.g. https://www.someone.com
+text_skin: ocean # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+url     : "http://knowlib.freedompaul.site" # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : "算法盒子"
+parent: # 父网站
+  - title: Freedom Paul's World
+    url: "http://freedompaul.site"
+    description: >
+      Freedom Paul的世界
+siblings: # 兄弟网站
+  - title: The Sanctuary
+    url: "http://sanctuary.freedompaul.site"
+    description: >
+      Freedom Paul的生活博客
+  # - title: Your Sibling Site Title
+  #   url: "http://sibling"
+  #   description: >
+  #     Your Sibling Site  Description
+  # - title: Your Sibling Site Title
+  #   url: "http://sibling"
+  #   description: >
+  #     Your Sibling Site  Description
+title   : The Knowledge Library
+progressValue: "2" # 完成度
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  Freedom Paul的知识库
 
 
 ## => Language and Timezone
 ##############################
-lang: zh-Hans # the language of your site, default as "en"
-timezone:  # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+lang: # the language of your site, default as "en"
+timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Freedom Paul
+  name      : "Freedom Paul"
   url       :
   avatar    : # path or url of avatar image (square)
-  bio       : I am an amazing person.
-  email     :
+  bio       : "I am an amazing person."
+  email     : "1240415444@qq.com"
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -49,7 +68,7 @@ author:
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : https://github.com/FreedomPaul # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  github    : "FreedomPaul" # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
@@ -62,7 +81,7 @@ repository_tree: #master
 ## => Paths
 ##############################
 paths:
-  root    : # title link url, "/" (default)
+  root    : "http://knowlib.freedompaul.site" # title link url, "/" (default)
   home    : # home layout url, "/" (default)
   archive : # "/archive.html" (default)
   rss     : # "/feed.xml" (default)
@@ -72,10 +91,9 @@ paths:
 ##############################
 ## excerpt
 excerpt_separator: <!--more-->
-excerpt_type: html # text (default), html
 
 ## license
-license:  # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
+license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
 
 ## TOC
 toc:
@@ -86,13 +104,14 @@ toc:
 ##############################
 ## Mathjax
 mathjax: true # false (default), true
-mathjax_autoNumber: true # false (default), true
+mathjax_autoNumber: # false (default), true
+mathjax_extensions: "color.js" # http://docs.mathjax.org/en/v2.5-latest/tex.html#supported-latex-commands
 
 ## Mermaid
-mermaid: # false (default), true
+mermaid: true # false (default), true
 
 ## Chart
-chart: # false (default), true
+chart: true # false (default), true
 
 
 ## => Paginate
@@ -109,7 +128,7 @@ sources: # bootcdn (default), unpkg
 ## => Sharing
 ##############################
 sharing:
-  provider: false # false (default), "addtoany", "addthis", "custom"
+  provider: "addtoany" # false (default), "addtoany", "addthis", "custom"
 
   ## AddThis
   addthis:
@@ -119,7 +138,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -128,12 +147,12 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
+    clientID    : f6aa5ebc56dcd508c8f2 # GitHub Application Client ID
+    clientSecret: 68ae6238ce657fc928f189ba055cf3d39c236e96 # GitHub Application Client Secret
+    repository  : KnowledgeLibraryFreedompaulSite # GitHub repo
+    owner       : FreedomPaul # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      # - your GitHub Id
+       - FreedomPaul
 
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
@@ -202,6 +221,13 @@ exclude:
   - /test
   - /vendor
 
+
+#collections_dir: docs
+collections:
+  algorithmbox:
+    output: true
+
+
 defaults:
   - scope:
       path: ""
@@ -209,12 +235,26 @@ defaults:
     values:
       layout: article
       sharing: true
-      license: true
+      license: false
       aside:
         toc: true
-      show_edit_on_github: true
-      show_subscribe: true
+      show_edit_on_github: false
+      show_subscribe: false
       pageview: true
+  - scope:
+      path: "_algorithmbox"
+      type: "algorithmbox"
+    values:
+      layout: article
+      nav_key: algorithmbox
+      sidebar:
+        nav: algorithm-docs
+      license: false
+      aside:
+        toc: true
+      show_edit_on_github: false
+      show_date: false
+      lightbox: true
 
 
 ## => Plugins

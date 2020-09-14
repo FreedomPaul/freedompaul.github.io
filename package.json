@@ -1,7 +1,7 @@
 {
-  "name": "algorithms-box",
-  "version": "1.0.0",
-  "author": "Freedom Paul",
+  "name": "jekyll-text-theme",
+  "version": "2.2.6",
+  "author": "Tian Qi",
   "license": "MIT",
   "keywords": [
     "jekyll",
@@ -57,5 +57,8 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "require": "^2.4.20"
   }
 }

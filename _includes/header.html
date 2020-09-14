@@ -1,9 +1,33 @@
+<div class="progress bg-warning" style="height: 8px;"  data-toggle="tooltip" data-placement="bottom" title="完成度：{{ site.progressValue }}%">
+  <div class="progress-bar bg-success" role="progressbar" style="width: {{ site.progressValue }}%;" aria-valuenow="{{ site.progressValue }}" aria-valuemin="0" aria-valuemax="100">{{ site.progressValue }}%</div>
+</div>
+<nav class="navbar navbar-expand-lg  navbar-dark text-light sticky-top bg-info " style="z-index:inherit;">
+  {% for item in site.parent %}
+  <a class="navbar-brand" title="{{ item.description }}" href="{{ item.url }}">{{ item.title }}</a>
+  {% endfor %}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}"  class="nav-link" href="#">{{ site.title }}</a>
+      </li>
+      {% for item in site.siblings %}
+      <li class="nav-item">
+        <a class="nav-link" title="{{ item.description }}"  href="{{ item.url }}">{{ item.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
 {%- if include.theme == 'dark' -%}
   <header class="header header--dark" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
 {%- elsif include.theme == 'light' -%}
-  <header class="header header--light" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
+  <header class="header header--light"  {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
 {%- else -%}
-  <header class="header" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
+  <header class="header"  {%- if include.background -%}  style="background: {{ include.background }};" {%- endif -%}>
 {%- endif -%}
     <div class="main">
       <div class="header__title">

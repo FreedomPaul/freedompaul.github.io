@@ -1,10 +1,12 @@
 ---
-title: "4.\"算法之书\""
-tags: AlgorithmBox
+title: "“算法之书”"
+permalink: /docs/algorithmbox/bookofalgorithm
+key: docs-3-bookofalgorithm
 ---
 
 ## “算法之书”
 
+敬请期待:)
 
 ### 最大子数组问题：The maximum-subarray problem
 
