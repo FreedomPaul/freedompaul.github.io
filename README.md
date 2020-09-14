@@ -1,1 +1,0 @@
-# Freedom Paul's Blog
